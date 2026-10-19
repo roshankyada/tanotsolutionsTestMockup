@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+:root {
+  --tanot-brand: #1a8cd0;
+  --tanot-brand-hover: #1578b3;
+  --tanot-brand-deep: #0e5f8f;
+  --tanot-wash: #eaf0fa;
+  --tanot-wash-strong: #dbe6f5;
+  --tanot-ink: #1c2430;
+  --tanot-muted: #5b6775;
+  --tanot-line: #d5e0ec;
+  --tanot-surface: #ffffff;
+  --tanot-dark: #1f2a37;
+  --tanot-insights: #e7f3eb;
+  --tanot-insights-line: #b7d7c2;
+  --tanot-star: #f5b301;
+  --tanot-danger: #c0392b;
+  --background: var(--tanot-surface);
+  --foreground: var(--tanot-ink);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-brand: var(--tanot-brand);
+  --color-brand-hover: var(--tanot-brand-hover);
+  --color-brand-deep: var(--tanot-brand-deep);
+  --color-wash: var(--tanot-wash);
+  --color-wash-strong: var(--tanot-wash-strong);
+  --color-ink: var(--tanot-ink);
+  --color-muted: var(--tanot-muted);
+  --color-line: var(--tanot-line);
+  --color-surface: var(--tanot-surface);
+  --color-dark: var(--tanot-dark);
+  --color-insights: var(--tanot-insights);
+  --color-insights-line: var(--tanot-insights-line);
+  --color-star: var(--tanot-star);
+  --color-danger: var(--tanot-danger);
+  --font-sans: var(--font-inter);
+  --radius-sm: 8px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --max-width-page: 72.5rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), "Inter", system-ui, sans-serif;
+}
+
+:focus-visible {
+  outline: 2px solid var(--tanot-brand);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  z-index: 80;
+  border-radius: var(--radius-sm);
+  background: var(--tanot-ink);
+  color: #fff;
+  padding: 0.5rem 0.75rem;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
